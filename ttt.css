@@ -173,6 +173,10 @@ img {
 	transform: rotateY(-180deg);
 }
 
+.coin-front{
+	
+}
+
 .coin.intro{
 	cursor: pointer;
 	animation: coin-intro 4s;

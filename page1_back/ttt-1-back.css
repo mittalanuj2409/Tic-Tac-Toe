@@ -1,0 +1,55 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom right, green, rgba(0, 255, 0, 0), rgb(255,0,0, 0),  red);
+}
+
+.sign-select{
+	display: grid;
+	position: relative;
+	grid-template-columns: 50vw 50vw;
+	height: auto;
+	grid-auto-rows: auto;
+	grid-gap: 1vh 1vw;
+	margin: 0px;
+	padding: 0px;
+	justify-content: left;
+	align-content: center;
+	transform-origin: center;
+	transition: transform 1s;
+}
+
+img {
+	position: relative;
+	width: 7vw;
+	min-width: 70px;
+	height: 7vw;
+	min-height: 70px;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+.sign-select p{
+	display: block;
+	width: auto;
+	font-size: 27px;
+	margin: 4vw 10px 0px 10px;
+	/*visibility: hidden;*/
+}
+
+.sign{
+	display:grid;
+	grid-template-columns: auto auto;
+	grid-column-gap: 10px;
+	grid-auto-rows: auto;
+	justify-content: center;
+	align-content: center;
+}
+
+

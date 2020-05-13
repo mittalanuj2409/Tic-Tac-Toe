@@ -1,0 +1,93 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom right, green, rgba(0, 255, 0, 0), rgb(255,0,0, 0),  red);
+}
+
+.sign-select{
+	display: grid;
+	position: relative;
+	grid-template-columns: 70vw 30vw;
+	height: auto;
+	grid-auto-rows: auto;
+	grid-gap: 1vh 1vw;
+	margin: 0px;
+	padding: 0px;
+	justify-content: left;
+	align-content: center;
+	transform-origin: center;
+	transition: transform 1s;
+}
+
+img {
+	width: 7vw;
+	min-width: 70px;
+	height: 7vw;
+	min-height: 70px;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+.sign-select p{
+	display: block;
+	width: auto;
+	font-size: 27px;
+	margin: 4vw 10px 0px 10px;
+	/*visibility: hidden;*/
+}
+
+.end{
+	transform: translateY(-110%);
+}
+
+.your-sign{
+	padding: 0px 8vw 0px 8vw;
+	display:grid;
+	grid-template-columns: auto auto auto auto;
+	grid-column-gap: 10px;
+	grid-auto-rows: auto;
+	justify-content: space-around;
+	align-content: center;
+}
+
+.before-click:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	/*transition: transform 1s;*/
+}
+
+.after-click {
+  transform: scale(0) rotateY(360deg);
+  transition: transform 1s;
+}
+
+.your-sign img{
+	position: relative;
+	transform-style: preserve-3d;
+	transform-origin: center;
+	transition: transform 1s;
+}
+
+.my-sign{
+	margin: 0px 20px 0px 20px;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-column-gap: 10px;
+	grid-auto-rows: auto;
+	justify-content: left;
+	align-content: center;
+}
+
+.my-sign img{
+	position: relative;
+	transform-style: preserve-3d;
+	transform-origin: center;
+	transition: transform 1s;
+}
