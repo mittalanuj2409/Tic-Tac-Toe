@@ -21,7 +21,7 @@ options.forEach(image => {
 			}, 250);
 			window.setTimeout(() => {
 				image.classList.remove(`after-click`);
-				window.location.href=`../page2/ttt-2.html`+`#`+selected_image.alt;
+				window.location.href=`ttt-2.html`+`#`+selected_image.alt;
 			}, 1000);
 		}
 	};
@@ -31,6 +31,6 @@ window.addEventListener( "pageshow", function ( event ) {
   			 ( typeof window.performance != "undefined" && 
             window.performance.navigation.type === 2 );
   if ( mode ) {
-    window.location=`../page1_back/ttt-1-back.html` + `#` + selected_image.alt;
+    window.location=`ttt-1-back.html` + `#` + selected_image.alt;
   }
 });
