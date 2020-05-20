@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script/ttt-2-back.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script/ttt-1-back.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/script/ttt-2-back.js":
+/***/ "./src/script/ttt-1-back.js":
 /*!**********************************!*\
-  !*** ./src/script/ttt-2-back.js ***!
+  !*** ./src/script/ttt-1-back.js ***!
   \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var toss = window.location.hash.substring(1);\nvar h1 = document.querySelector('h1');\nvar h2 = document.querySelector('h2');\n\nif (toss == `false`) {\n  h1.innerHTML = 'Congratulations!!!';\n  h2.innerHTML = 'You Won The Toss';\n} else {\n  h1.innerHTML = 'I won the toss!!!';\n}\n\ndocument.querySelector('.restart').addEventListener('click', function () {\n  window.location.href = 'ttt-1.html';\n});\n\n//# sourceURL=webpack:///./src/script/ttt-2-back.js?");
+eval("var your_sign = document.querySelector(\".sign\");\nvar opp_marker = your_sign.querySelector(\"img\");\nvar imgsrc = window.location.hash.substring(1);\nopp_marker.src = \"../images/\".concat(imgsrc, \".jpg\");\nopp_marker.alt = imgsrc;\ndocument.querySelector('.restart').addEventListener('click', function () {\n  window.location.href = '../../ttt-1.html';\n});\n\n//# sourceURL=webpack:///./src/script/ttt-1-back.js?");
 
 /***/ })
 

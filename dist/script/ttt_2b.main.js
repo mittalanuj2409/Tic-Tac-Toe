@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script/ttt-1.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script/ttt-2-back.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/script/ttt-1.js":
-/*!*****************************!*\
-  !*** ./src/script/ttt-1.js ***!
-  \*****************************/
+/***/ "./src/script/ttt-2-back.js":
+/*!**********************************!*\
+  !*** ./src/script/ttt-2-back.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var container = document.querySelector(\".container\");\nvar your_sign = document.querySelector(\".your-sign\");\nvar options = your_sign.querySelectorAll(\"img\");\nvar me = document.querySelector(\"#me\");\nvar selected = false;\nvar selected_image;\nlocalStorage.clear();\noptions.forEach(function (image) {\n  // console.log(image.src);\n  image.onclick = function () {\n    if (!selected) {\n      selected = true;\n      selected_image = image;\n      options.forEach(function (opt) {\n        opt.classList.remove(\"before-click\");\n      });\n      image.classList.add(\"after-click\");\n      me.classList.add(\"after-click\");\n      window.setTimeout(function () {\n        container.classList.add(\"end\");\n      }, 250);\n      window.setTimeout(function () {\n        image.classList.remove(\"after-click\");\n        window.location.href = \"ttt-2.html\" + \"#\" + selected_image.alt;\n      }, 1000);\n    }\n  };\n});\nwindow.addEventListener(\"pageshow\", function (event) {\n  var mode = event.persisted || typeof window.performance != \"undefined\" && window.performance.navigation.type === 2;\n\n  if (mode) {\n    window.location = \"ttt-1-back.html\" + \"#\" + selected_image.alt;\n  }\n});\n\n//# sourceURL=webpack:///./src/script/ttt-1.js?");
+eval("var toss = window.location.hash.substring(1);\nvar h1 = document.querySelector('h1');\nvar h2 = document.querySelector('h2');\n\nif (toss == 'false') {\n  h1.innerHTML = 'Congratulations!!!';\n  h2.innerHTML = 'You Won The Toss';\n} else {\n  h1.innerHTML = 'I won the toss!!!';\n}\n\ndocument.querySelector('.restart').addEventListener('click', function () {\n  window.location.href = '../../ttt-1.html';\n});\n\n//# sourceURL=webpack:///./src/script/ttt-2-back.js?");
 
 /***/ })
 
