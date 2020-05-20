@@ -4,11 +4,11 @@ function cell_info(cellID){
 	let cell = document.getElementById(cellID);
 	let image = cell.querySelector('img');
 	function add_image(name){
-		image.setAttribute('src', `../src/images/${name}.${name == 'me'? 'png' : 'jpg'}`);
+		image.setAttribute('src', `../images/${name}.${name == 'me'? 'png' : 'jpg'}`);
 		image.setAttribute('alt', name);
 		image.classList.toggle('seen');
 	}
-	return {owner, cell, add_image};
+	return {owner, cell, add_image, image};
 }
 
 function player_info(name){
@@ -33,24 +33,32 @@ function isOver(cells){
 
 function checkWinner(cells){
 
-	if(cells[0].owner != 'none' && cells[0].owner == cells[1].owner && cells[1].owner == cells[2].owner)
+	if(cells[0].owner != 'none' && cells[0].owner == cells[1].owner && cells[1].owner == cells[2].owner){
 		return cells[0].owner == 'me' ? 'me' : 'you';
-	if(cells[3].owner != 'none' && cells[3].owner == cells[4].owner && cells[4].owner == cells[5].owner)
+	}
+	if(cells[3].owner != 'none' && cells[3].owner == cells[4].owner && cells[4].owner == cells[5].owner){
 		return cells[3].owner == 'me' ? 'me' : 'you';
-	if(cells[6].owner != 'none' && cells[6].owner == cells[7].owner && cells[7].owner == cells[8].owner)
+	}
+	if(cells[6].owner != 'none' && cells[6].owner == cells[7].owner && cells[7].owner == cells[8].owner){
 		return cells[6].owner == 'me' ? 'me' : 'you';
+	}
 
-	if(cells[0].owner != 'none' && cells[0].owner == cells[3].owner && cells[3].owner == cells[6].owner)
+	if(cells[0].owner != 'none' && cells[0].owner == cells[3].owner && cells[3].owner == cells[6].owner){
 		return cells[0].owner == 'me' ? 'me' : 'you';
-	if(cells[1].owner != 'none' && cells[1].owner == cells[4].owner && cells[4].owner == cells[7].owner)
+	}
+	if(cells[1].owner != 'none' && cells[1].owner == cells[4].owner && cells[4].owner == cells[7].owner){
 		return cells[1].owner == 'me' ? 'me' : 'you';
-	if(cells[2].owner != 'none' && cells[2].owner == cells[5].owner && cells[5].owner == cells[8].owner)
+	}
+	if(cells[2].owner != 'none' && cells[2].owner == cells[5].owner && cells[5].owner == cells[8].owner){
 		return cells[2].owner == 'me' ? 'me' : 'you';
+	}
 
-	if(cells[0].owner != 'none' && cells[0].owner == cells[4].owner && cells[4].owner == cells[8].owner)
+	if(cells[0].owner != 'none' && cells[0].owner == cells[4].owner && cells[4].owner == cells[8].owner){
 		return cells[0].owner == 'me' ? 'me' : 'you';
-	if(cells[2].owner != 'none' && cells[2].owner == cells[4].owner && cells[4].owner == cells[6].owner)
+	}
+	if(cells[2].owner != 'none' && cells[2].owner == cells[4].owner && cells[4].owner == cells[6].owner){
 		return cells[2].owner == 'me' ? 'me' : 'you';
+	}
 
 	if(isOver(cells)) return 'draw';
 	return 'none';
@@ -124,6 +132,5 @@ function bestMove(myTurn, copyCells, depth){
 	}
 	
 }
-
 
 module.exports = {bestMove, cell_info, player_info, getAvailableCells, isOver, checkWinner};

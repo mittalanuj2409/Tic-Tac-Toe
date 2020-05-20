@@ -81,55 +81,20 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script/ttt-1.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script/ttt-2-back.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/script/ttt-1.js":
-/*!*****************************!*\
-  !*** ./src/script/ttt-1.js ***!
-  \*****************************/
+/***/ "./src/script/ttt-2-back.js":
+/*!**********************************!*\
+  !*** ./src/script/ttt-2-back.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var select_sign = document.querySelector(".sign-select");
-var your_sign = document.querySelector(".your-sign");
-var options = your_sign.querySelectorAll("img");
-var me = document.querySelector("#me");
-var selected = false;
-var selected_image;
-localStorage.clear();
-options.forEach(function (image) {
-  // console.log(image.src);
-  image.onclick = function () {
-    if (!selected) {
-      selected = true;
-      selected_image = image;
-      options.forEach(function (opt) {
-        opt.classList.remove("before-click");
-      });
-      image.classList.add("after-click");
-      me.classList.add("after-click");
-      window.setTimeout(function () {
-        select_sign.classList.add("end");
-      }, 250);
-      window.setTimeout(function () {
-        image.classList.remove("after-click");
-        window.location.href = "ttt-2.html" + "#" + selected_image.alt;
-      }, 1000);
-    }
-  };
-});
-window.addEventListener("pageshow", function (event) {
-  var mode = event.persisted || typeof window.performance != "undefined" && window.performance.navigation.type === 2;
-
-  if (mode) {
-    window.location = "ttt-1-back.html" + "#" + selected_image.alt;
-  }
-});
+eval("var toss = window.location.hash.substring(1);\nvar h1 = document.querySelector('h1');\nvar h2 = document.querySelector('h2');\n\nif (toss == `false`) {\n  h1.innerHTML = 'Congratulations!!!';\n  h2.innerHTML = 'You Won The Toss';\n} else {\n  h1.innerHTML = 'I won the toss!!!';\n}\n\ndocument.querySelector('.restart').addEventListener('click', function () {\n  window.location.href = 'ttt-1.html';\n});\n\n//# sourceURL=webpack:///./src/script/ttt-2-back.js?");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=ttt-1-main.js.map

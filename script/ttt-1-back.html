@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="../style/ttt-1-back.css">
+	<link rel="stylesheet" href="../style/background.css">
+	<link rel="stylesheet" href="../style/rules.css">
+	<link rel="stylesheet" href="../style/button.css">
+</head>
+<body>
+	<div class="sign-select">
+		<div class="sign">
+			<p>Your Marker</p>
+			<img>
+		</div>
+		<div style="justify-content: left;" class="sign">
+			<p>My Marker</p>
+			<img id="me" src="../images/me.png">
+		</div>
+	</div>
+	<div class="re">
+		<button class="restart">Restart Game</button>
+	</div>
+	<div class="wrapper">
+		<div class="rules">
+			<div><ul>
+				<h4>Steps:</h4>
+				<li>Select a marker as your symbol.</li>
+				<li>Toss a coin to decide who plays first.</li>
+				<li>Accept my challenge and try to defeat me.</li>
+			</ul></div>
+			<div><ul>
+				<h4>How to play:</h4>
+				<li>A 3x3 arena is given. Click to select a cell at your turn.</li>
+				<li>A player wins if her marker is positioned in all cells of a row, a column or a diagonal.</li>
+				<li>Game ends if a player wins or all cells are filled resulting in a draw.</li>
+			</ul></div>
+		</div>
+	</div>
+	<script src="ttt_1b.main.js"></script>
+</body>
+</html>

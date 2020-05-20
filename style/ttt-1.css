@@ -1,3 +1,10 @@
+.container{
+	height: 100%;
+	width: 100%;
+	transform-origin: center;
+	transition: transform 1s;
+}
+
 
 .sign-select{
 	display: grid;
@@ -10,8 +17,6 @@
 	padding: 0px;
 	justify-content: left;
 	align-content: center;
-	transform-origin: center;
-	transition: transform 1s;
 }
 
 img {

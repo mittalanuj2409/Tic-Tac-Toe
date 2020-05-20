@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script/ttt-1-back.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script/ttt-1.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/script/ttt-1-back.js":
-/*!**********************************!*\
-  !*** ./src/script/ttt-1-back.js ***!
-  \**********************************/
+/***/ "./src/script/ttt-1.js":
+/*!*****************************!*\
+  !*** ./src/script/ttt-1.js ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("let your_sign = document.querySelector(`.sign`);\nlet opp_marker = your_sign.querySelector(`img`);\nlet imgsrc = window.location.hash.substring(1)\nopp_marker.src = `../src/images/${imgsrc}.jpg`;\nopp_marker.alt = imgsrc;\n\n//# sourceURL=webpack:///./src/script/ttt-1-back.js?");
+eval("var container = document.querySelector(\".container\");\nvar your_sign = document.querySelector(\".your-sign\");\nvar options = your_sign.querySelectorAll(\"img\");\nvar me = document.querySelector(\"#me\");\nvar selected = false;\nvar selected_image;\nlocalStorage.clear();\noptions.forEach(function (image) {\n  // console.log(image.src);\n  image.onclick = function () {\n    if (!selected) {\n      selected = true;\n      selected_image = image;\n      options.forEach(function (opt) {\n        opt.classList.remove(\"before-click\");\n      });\n      image.classList.add(\"after-click\");\n      me.classList.add(\"after-click\");\n      window.setTimeout(function () {\n        container.classList.add(\"end\");\n      }, 250);\n      window.setTimeout(function () {\n        image.classList.remove(\"after-click\");\n        window.location.href = \"ttt-2.html\" + \"#\" + selected_image.alt;\n      }, 1000);\n    }\n  };\n});\nwindow.addEventListener(\"pageshow\", function (event) {\n  var mode = event.persisted || typeof window.performance != \"undefined\" && window.performance.navigation.type === 2;\n\n  if (mode) {\n    window.location = \"ttt-1-back.html\" + \"#\" + selected_image.alt;\n  }\n});\n\n//# sourceURL=webpack:///./src/script/ttt-1.js?");
 
 /***/ })
 

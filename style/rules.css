@@ -1,0 +1,30 @@
+
+.rules{
+	display: grid;
+	grid-template-columns: 40% 60%;
+	grid-auto-rows: auto; 
+	position: relative;
+	grid-gap: 4vw;
+	width: 45vw;
+}
+
+.rules ul{
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+}
+
+.rules li{
+	padding: 10px;
+	font-size: 20px;
+}
+
+.wrapper{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	top: 10vh;
+}

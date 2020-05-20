@@ -1,4 +1,4 @@
-let select_sign = document.querySelector(`.sign-select`)
+let container = document.querySelector(`.container`);
 let your_sign = document.querySelector(`.your-sign`);
 let options = your_sign.querySelectorAll(`img`);
 let me = document.querySelector(`#me`);
@@ -17,7 +17,7 @@ options.forEach(image => {
 			image.classList.add(`after-click`);
 			me.classList.add(`after-click`);
 			window.setTimeout(() => {
-				select_sign.classList.add(`end`);
+				container.classList.add(`end`);
 			}, 250);
 			window.setTimeout(() => {
 				image.classList.remove(`after-click`);

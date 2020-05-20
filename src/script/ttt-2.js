@@ -2,7 +2,7 @@ coin_div = document.querySelector(`.coin-div`);
 coin_front = document.querySelector(`.coin-front`);
 coin_back = document.querySelector(`.coin-back`);
 let imgsrc = window.location.hash.substring(1);
-coin_back.src = `../src/images/${imgsrc}.jpg`;
+coin_back.src = `../images/${imgsrc}.jpg`;
 coin_back.alt=imgsrc;
 let tossed = false;
 let result;
@@ -40,6 +40,6 @@ window.addEventListener( "pageshow", function ( event ) {
   			 ( typeof window.performance != "undefined" && 
             window.performance.navigation.type === 2 );
   if ( mode ) {
-    window.location=`ttt-2-back.html` + `#` + imgsrc + `#` + (result>0.5);
+    window.location=`ttt-2-back.html` + `#` + (result>0.5);
   }
 });

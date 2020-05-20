@@ -13,7 +13,7 @@ p{
 	grid-row-gap: 20px;
 	justify-items: center;
 	align-items: center;	 
-	animation: start 2s linear forwards;
+	animation: start 1.5s linear forwards;
 	/*animation-iteration-count: infinite;*/
 	/*animation-timing-function: linear;*/
 }
@@ -84,6 +84,6 @@ p{
 }
 
 @keyframes start{
-	from{transform: translateY(-500px);}
-	to{transform: translateY(35vh);}
+	from{transform: translateY(-1000px);}
+	to{transform: translateY(15vh);}
 }

@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script/ttt-2-back.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script/ttt-1-back.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/script/ttt-2-back.js":
+/***/ "./src/script/ttt-1-back.js":
 /*!**********************************!*\
-  !*** ./src/script/ttt-2-back.js ***!
+  !*** ./src/script/ttt-1-back.js ***!
   \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./src/script/ttt-2-back.js?");
+eval("var your_sign = document.querySelector(\".sign\");\nvar opp_marker = your_sign.querySelector(\"img\");\nvar imgsrc = window.location.hash.substring(1);\nopp_marker.src = \"../images/\".concat(imgsrc, \".jpg\");\nopp_marker.alt = imgsrc;\ndocument.querySelector('.restart').addEventListener('click', function () {\n  window.location.href = 'ttt-1.html';\n});\n\n//# sourceURL=webpack:///./src/script/ttt-1-back.js?");
 
 /***/ })
 
