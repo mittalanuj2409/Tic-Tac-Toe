@@ -21,6 +21,7 @@ The game is complete. Report any bugs to <mittalanuj2409@gmail.com>
 * Copy these lines:
 	* `<npm install>`
 	* `<npm start>` or `<npm run start>`
-	* Keep the terminal or command prompt running and open a web-browser.
+
+* Keep the terminal or command prompt running and open a web-browser.
 
 * Copy this line `<http://localhost:2020/ttt-1.html>` and paste in the url section of browser. Press enter.
