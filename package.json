@@ -1,0 +1,25 @@
+{
+  "name": "ttt",
+  "version": "1.0.0",
+  "description": "ttt_trial",
+  "main": "./src/script/ttt-1.js",
+  "scripts": {
+    "start": "npm run build && npm run open",
+    "build": "webpack --config webpack.config.js --mode development",
+    "preview": "npm run build && http-server ttt-1.html",
+    "open": "concurrently \"http-server -a localhost -p 2020\" \"open http://localhost:2020/ttt-1.html\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.2.0",
+    "html-webpack-plugin": "^4.3.0",
+    "http-server": "^0.12.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
