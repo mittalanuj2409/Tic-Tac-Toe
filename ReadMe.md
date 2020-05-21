@@ -8,7 +8,7 @@ This game is created for active learning of JavaScript, npm, babel and webpack. 
 
 ## Build Status
 
-The game is complete and can be run on latest versions of Google Chrome and Mozilla Firefox. Report any bugs to <mittalanuj2409@gmail.com>
+The game is complete and can be run on latest versions of all common web browsers. Report any bugs to <mittalanuj2409@gmail.com>
 
 ## Installation
 

@@ -3,4 +3,5 @@ v8-compile-cache-0
 src
 package.json
 webpack.config.js
+babel.config.js
 
