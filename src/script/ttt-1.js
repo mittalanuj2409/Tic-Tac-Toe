@@ -4,9 +4,7 @@ let options = your_sign.querySelectorAll(`img`);
 let me = document.querySelector(`#me`);
 let selected = false;
 let selected_image;
-localStorage.clear();
 options.forEach(image => {
-	// console.log(image.src);
 	image.onclick = () =>{
 		if(!selected){
 			selected = true;

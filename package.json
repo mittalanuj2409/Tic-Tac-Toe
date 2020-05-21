@@ -7,7 +7,7 @@
     "start": "npm run build && npm run open",
     "build": "webpack --config webpack.config.js --mode development",
     "preview": "npm run build && http-server ttt-1.html",
-    "open": "concurrently \"http-server -a localhost -p 2020\" \"open http://localhost:2020/ttt-1.html\""
+    "open": "concurrently \"http-server -a localhost -p 2021\" \"open http://localhost:2021/ttt-1.html\""
   },
   "author": "",
   "license": "ISC",
